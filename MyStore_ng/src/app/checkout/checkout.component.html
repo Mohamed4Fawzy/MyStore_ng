@@ -1,0 +1,9 @@
+<div id="checkout-container">
+    <h3>Fill in your details</h3>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <input type="text" name="name" [(ngModel)]="name" placeholder="full name"  required #fullName="ngModel">
+        <input type="text" name="address" [(ngModel)]="address" placeholder="address"   required #addressField="ngModel">
+        <input type="text" name="creditCard" [(ngModel)]="creditCard"  placeholder="credit card numbers"  required #card="ngModel">
+        <button type="submit" [disabled]="form.invalid || (this.cartCount$ | async) == 0">Submit</button>
+    </form>
+</div>

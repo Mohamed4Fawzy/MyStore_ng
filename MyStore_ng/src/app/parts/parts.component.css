@@ -1,0 +1,22 @@
+#nav-container, ul {
+    text-align: center;
+    margin: 0;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: cadetblue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

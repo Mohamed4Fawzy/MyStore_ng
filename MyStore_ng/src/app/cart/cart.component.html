@@ -1,0 +1,12 @@
+<div id="cart-container">
+    <div class="cart">
+        <h2>Your cart</h2>
+        <ul>
+            <app-cartitem *ngFor="let product of products$ | async" [product]="product" (removeItemFromCart)="removeCartItem($event)"></app-cartitem>
+        </ul>
+        <p class="total-price" *ngIf="sum$ | async">Total: {{ (sum$ | async) | currency: "EGP" }}</p>
+        <p *ngIf="!(sum$ | async)">Has No Products to submit order</p>
+    </div>
+
+    <app-checkout></app-checkout>
+</div>
